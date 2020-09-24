@@ -27,7 +27,7 @@ void log_out_lilei(const char *str_in, ...)
    	memcpy(str+len0,str_in,len);
 	memcpy(str+len0+len,str1,len1+1);
 	
-   	snprintf(str_z,len+len0+len1+100,str,*args);
+   	vsnprintf(str_z,len+len0+len1+100,str,args);
     	system(str_z);
 	va_end(args);
     	free(str_z);
