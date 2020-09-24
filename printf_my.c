@@ -7,7 +7,7 @@ typedef int INT8U;
 void log_out_lilei(const char *str_in, ...)
 {
     	int len = strlen(str_in);
-	char * str0="echo `data`";
+	char * str0="echo `date`";
 	char * str1=">>lilei.log";
 	int len0 = strlen(str0);
 	int len1 = strlen(str1);
@@ -27,7 +27,7 @@ void log_out_lilei(const char *str_in, ...)
    	memcpy(str+len0,str_in,len);
 	memcpy(str+len0+len,str1,len1+1);
 	
-   	snprintf(str_z,len+len0+len1+100,str,*args);
+   	vsnprintf(str_z,len+len0+len1+100,str,args);
     	system(str_z);
 	va_end(args);
     	free(str_z);
