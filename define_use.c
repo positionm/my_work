@@ -25,3 +25,5 @@ int main()
     printf("%d\n", f2(4, 5));
     return 0;
 }
+
+tt1;
